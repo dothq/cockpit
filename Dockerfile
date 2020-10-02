@@ -1,5 +1,7 @@
 FROM php:7-apache
 
+COPY config.php /var/www/html/config/config.php
+
 RUN apt-get update \
     && apt-get install -y \
 		wget zip unzip \

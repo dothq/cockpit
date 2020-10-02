@@ -80,44 +80,44 @@
         modal.show();
     };
 
-    // Material Ripple effect
-    $('html').on('click', 'a, button, input, .ripple', function(e) {
+    // // Material Ripple effect
+    // $('html').on('click', 'a, button, input, .ripple', function(e) {
 
-        var trigger = $(this), w = trigger.outerWidth(), h = trigger.outerHeight(),
-            d = Math.min(w, h), isInput = trigger.is('input'), surfaceCSS, surface;
+    //     var trigger = $(this), w = trigger.outerWidth(), h = trigger.outerHeight(),
+    //         d = Math.min(w, h), isInput = trigger.is('input'), surfaceCSS, surface;
 
-        surfaceCSS = {
-            top      : trigger.offset().top,
-            left     : trigger.offset().left,
-            width    : w,
-            height   : h,
-            overflow : d > 100 || trigger.is('button,.uk-button') ? 'hidden' : ''
-        };
+    //     surfaceCSS = {
+    //         top      : trigger.offset().top,
+    //         left     : trigger.offset().left,
+    //         width    : w,
+    //         height   : h,
+    //         overflow : d > 100 || trigger.is('button,.uk-button') ? 'hidden' : ''
+    //     };
 
-        surface = $('<div class="material-ripple"><div class="material-ink"></div></div>').css(surfaceCSS).appendTo('body');
+    //     surface = $('<div class="material-ripple"><div class="material-ink"></div></div>').css(surfaceCSS).appendTo('body');
 
-        surface.find('.material-ink').css({
-            height     : d,
-            width      : d,
-            top: Math.floor(h/2 - d/2),
-            left: isInput ? e.clientX - surfaceCSS.left : Math.floor(w/2 - d/2),
-            background : trigger.attr('ripple-color') || ''
-        }).on('animationend', function() {
-            surface.remove();
-        }).addClass('animate-ink').width();
+    //     surface.find('.material-ink').css({
+    //         height     : d,
+    //         width      : d,
+    //         top: Math.floor(h/2 - d/2),
+    //         left: isInput ? e.clientX - surfaceCSS.left : Math.floor(w/2 - d/2),
+    //         background : trigger.attr('ripple-color') || ''
+    //     }).on('animationend', function() {
+    //         surface.remove();
+    //     }).addClass('animate-ink').width();
 
-        setTimeout(function(){
-            surface.remove();
-        }, 500);
+    //     setTimeout(function(){
+    //         surface.remove();
+    //     }, 500);
 
-    }).on('keydown', function (e) {
+    // }).on('keydown', function (e) {
 
-        var menu = $('.app-menu-container');
+    //     var menu = $('.app-menu-container');
 
-        if (e.keyCode === 27 && menu.hasClass('uk-open')) { // ESC
-            menu.data('dropdown').hide();
-        }
-    });;
+    //     if (e.keyCode === 27 && menu.hasClass('uk-open')) { // ESC
+    //         menu.data('dropdown').hide();
+    //     }
+    // });;
 
     // favicon pollyfill for svgs in chrome
 
