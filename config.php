@@ -6,7 +6,7 @@ return [
     'app.name' => 'Dot HQ',
 
     # site url (optional) - helpful if you're behind a reverse proxy
-    'site_url' => 'https://dothq.co',
+    'site_url' => 'https://cms.dothq.co',
 
     # define the languages you want to manage
     'languages' => [
